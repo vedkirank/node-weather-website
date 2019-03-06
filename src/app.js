@@ -57,7 +57,8 @@ app.get('/weather',(req,res) => {
                     }else{
                         
                         res.send({
-                            forecast:`Its currently ${weatherResults.temperature}.It feels like ${weatherResults.apparentTemperature}`,
+                            forecast:`Its currently ${weatherResults.temperature}.It feels like ${weatherResults.apparentTemperature}. 
+                            So the weather is ${weatherResults.summary}`,
                             location:addressResults.address,
                             address: req.query.address
                         });
